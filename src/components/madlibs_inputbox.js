@@ -1,24 +1,30 @@
 import React, { Component } from 'react';
 import {
     Col,
-    Row
+    Row,
+    Card
 } from 'reactstrap';
 
 export default class MadlibTextBox extends Component {
 
-    handleChange = function() {
-        console.log('trying')
-    }
+    
 
     render() {
         return(
-            <Col md="3" className="inputWrapper">
+            <Col md="3" className="input-wrapper">
                 <Row>
                     <Col md="2">
-                        <label className="greenLabel">{this.props.num}</label>
+                        <label className="green-label">{this.props.num}</label>
                     </Col>
                     <Col md="10">
-                        <input placeholder={this.props.placeholder} type="text" onChange={this.handleChange}/>
+                        <input placeholder={this.props.placeholder} type="text" />
+                    </Col>
+                </Row>
+                <Row>
+                    <Col md="2"></Col>
+                    <Col md="10">
+                        <div className="input-description">{this.props.placeholder}</div>
+
                     </Col>
                 </Row>
             </Col>
